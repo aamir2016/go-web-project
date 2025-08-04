@@ -1,0 +1,4 @@
+apiVersion: v2 #This is Helm chart API version. v2 is used for helm 3+
+name: go-web-server
+description: A simple web server in Go lang
+version: 0.1.0 #version of this chart

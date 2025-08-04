@@ -1,0 +1,12 @@
+replicaCount: 1  #No. of pods
+image:
+  repository: localhost:5000 #Docker repository
+  repoPath: /poc-images/go-web-server
+  tag: latest  #It will always pull the latest image
+  pullSecret: nexus-secret
+  #pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 8090
+

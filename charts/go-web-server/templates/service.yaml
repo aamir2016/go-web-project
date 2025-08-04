@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{.Release.Name}}-service
+spec:
+  type: {{.Values.service.type}}
+  selector:
+    app: {{ .Release.Name }}  #Selects the pods with this matching label
+  ports:
+    - port: 8090  #Exposing this Service to this port.
+      targetPort: 8090  #This is the containerPort.
+
