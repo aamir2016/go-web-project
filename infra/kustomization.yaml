@@ -1,0 +1,11 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - helmrelease.yaml
+configMapGenerator:
+  - name: go-web-values
+    namespace: poc-app
+    files:
+      - values.yaml=../charts/go-web-server/values.yaml
+generatorOptions:
+  disableNameSuffixHash: true

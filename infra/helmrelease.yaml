@@ -12,5 +12,7 @@ spec:
         kind: GitRepository
         name: go-helm-source             # 👈 the name you used earlier
         namespace: flux-system
-  valuesFiles:
-    - charts/go-web-server/values.yaml
+  valuesFrom:
+    - kind: ConfigMap
+      name: go-web-values
+      valuesKey: values.yaml
