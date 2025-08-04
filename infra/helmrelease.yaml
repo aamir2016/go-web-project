@@ -13,4 +13,4 @@ spec:
         name: go-helm-source             # 👈 the name you used earlier
         namespace: flux-system
   valuesFiles:
-    - ./charts/go-web-server/values.yaml
+    - charts/go-web-server/values.yaml
