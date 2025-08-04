@@ -2,7 +2,7 @@ replicaCount: 1  #No. of pods
 image:
   repository: localhost:5000 #Docker repository
   repoPath: /poc-images/go-web-server
-  tag: latest  #It will always pull the latest image
+  tag: 1.1  #It will always pull the latest image
   pullSecret: nexus-secret
   #pullPolicy: IfNotPresent
 

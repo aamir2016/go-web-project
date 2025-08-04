@@ -1,0 +1,14 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  finalizers:
+  - finalizers.fluxcd.io
+  generation: 1
+  name: go-helm-source
+  namespace: flux-system
+spec:
+  interval: 1m0s
+  ref:
+    branch: main
+  timeout: 60s
+  url: https://github.com/aamir2016/go-web-project.git
