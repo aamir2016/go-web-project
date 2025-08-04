@@ -1,13 +1,13 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  name: go-web-infra
+  name: go-web-server
   namespace: flux-system
 spec:
-  interval: 1m
-  path: ./infra                   # points to HelmRelease folder
+  interval: 10m
+  path: ./infra         # ONLY this folder is watched by default
   prune: true
   sourceRef:
     kind: GitRepository
     name: go-helm-source
-  targetNamespace: poc-app         # HelmRelease + chart deployed here
+  targetNamespace: poc-app
